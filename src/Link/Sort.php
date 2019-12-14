@@ -25,7 +25,7 @@ trait Sort
         }
         if (is_callable($sortBy)) {
             $this->sortWithCallback($sortBy, $options);
-        } else {
+        } else if (is_int($sortBy)) {
             $this->sortWithFlags($sortBy, $options);
         }
 
