@@ -23,7 +23,7 @@ trait Sort
         if (!$sortBy) {
             $sortBy = SORT_REGULAR;
         }
-        if ($sortBy && is_callable($sortBy)) {
+        if (is_callable($sortBy)) {
             $this->sortWithCallback($sortBy, $options);
         } else {
             $this->sortWithFlags($sortBy, $options);
