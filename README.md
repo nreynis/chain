@@ -121,6 +121,7 @@ All of these methods manipulate the array, but not all of them return an instanc
 `->shift()` removes the first element from the array and returns it.
 
 - `->changeKeyCase()`
+- `->chunk(int[, array])`
 - `->combine(array|Chain, array|Chain)`
 - `->count()`
 - `->diff(array|Chain)`
