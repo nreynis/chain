@@ -10,7 +10,7 @@ namespace Cocur\Chain\Link;
 trait Chunk
 {
     /**
-     * @param int $size
+     * @param int   $size
      * @param array $options options, including `preserveKeys` to prevent reindexing
      *
      * @return self
