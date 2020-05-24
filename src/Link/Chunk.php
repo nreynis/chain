@@ -25,7 +25,7 @@ trait Chunk
             $this->array = array_chunk($this->array, $size);
         }
 
-        if (empty($options['decorate']) || $options['decorate'] === true) {
+        if (empty($options['decorate']) || true === $options['decorate']) {
             foreach ($this->array as $index => $chunk) {
                 $this->array[$index] = new static($chunk);
             }
