@@ -12,8 +12,8 @@ trait Chunk
     /**
      * @param int   $size
      * @param array $options options, including:
-     * bool `preserveKeys` to prevent reindexing, default to false
-     * bool `decorate` to generate chains instead of arrays, default tu true
+     *                       bool `preserveKeys` to prevent reindexing, default to false
+     *                       bool `decorate` to generate chains instead of arrays, default tu true
      *
      * @return self
      */
