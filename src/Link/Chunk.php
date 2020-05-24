@@ -11,7 +11,9 @@ trait Chunk
 {
     /**
      * @param int   $size
-     * @param array $options options, including `preserveKeys` to prevent reindexing
+     * @param array $options options, including:
+     * bool `preserveKeys` to prevent reindexing, default to false
+     * bool `decorate` to generate chains instead of arrays, default tu true
      *
      * @return self
      */
@@ -21,6 +23,12 @@ trait Chunk
             $this->array = array_chunk($this->array, $size, $options['preserveKeys']);
         } else {
             $this->array = array_chunk($this->array, $size);
+        }
+
+        if (empty($options['decorate']) || $options['decorate'] === true) {
+            foreach ($this->array as $index => $chunk) {
+                $this->array[$index] = new static($chunk);
+            }
         }
 
         return $this;

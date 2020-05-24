@@ -1,6 +1,6 @@
 <?php
 
-namespace Cocur\Chain\Chunk;
+namespace Cocur\Chain\Link;
 
 /**
  * EveryTest.
