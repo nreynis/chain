@@ -3,6 +3,7 @@
 namespace Cocur\Chain;
 
 use Cocur\Chain\Link\ChangeKeyCase;
+use Cocur\Chain\Link\Chunk;
 use Cocur\Chain\Link\Combine;
 use Cocur\Chain\Link\Count;
 use Cocur\Chain\Link\CountValues;
@@ -54,6 +55,7 @@ use Countable;
 class Chain extends AbstractChain implements Countable
 {
     use ChangeKeyCase;
+    use Chunk;
     use Combine;
     use Count;
     use CountValues;

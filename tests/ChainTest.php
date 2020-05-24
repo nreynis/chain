@@ -77,6 +77,7 @@ class ChainTest extends \PHPUnit\Framework\TestCase
         $c = new Chain();
 
         $this->assertTrue(method_exists($c, 'changeKeyCase'));
+        $this->assertTrue(method_exists($c, 'chunk'));
         $this->assertTrue(method_exists($c, 'combine'));
         $this->assertTrue(method_exists($c, 'count'));
         $this->assertTrue(method_exists($c, 'countValues'));
